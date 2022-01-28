@@ -1,0 +1,119 @@
+body {
+  font-family: Lora;
+  font-size: 18px;
+  /* line-height acts as a multiplier for font-size */
+  line-height: 1.5;
+  color: #ffffff;
+  /* By default background images will tile/repeat across the whole background of the element*/
+  background-image: url("background.svg");
+  /* this will make our page with fluid until it reaches 640 px 
+  and then it will stop growing. This makes the site responsive */
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+
+header {
+
+  background-color: #ffffff;
+  /* Padding creates space around the outside of our content */
+  padding: 40px;
+}
+
+nav {
+  background-color: #f05d5d ;
+  /* we can specify all the padding sides in one shorthand 
+  which goes in the same order as a clock */
+  padding: 20px 40px 20px 40px;
+}
+
+/* this will only grab a tags inside of header tags */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  color: #5000ff;
+  border-bottom: solid 2px #ffffff;
+}
+
+section {
+  background-color: #5000ff;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.image {
+  padding: 0;
+}
+
+blockquote {
+  font-size: 32px;
+  line-height: 1.2;
+  font-style: italic;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.map {
+  width: 100%;
+}
+
+.contact p {
+  margin-top: 20px
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: solid 2px #f05d5d;
+  padding-bottom: 1px;
+}
+/* when our screen is below 740px, these styles will be applied. this is called a media query
+makes the site responsive to smaller screens */
+
+@media (max-width: 740px){
+/* These styles will be applied to the section and the header */
+  section,
+  header {
+      padding: 20px;
+  }
+
+  nav {
+    padding: 10px 20px 10px 20px;
+  }
+  
+  h2,
+  blockquote {
+    font-size: 24px;
+  }
+
+  body{
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  nav a {
+    /* This will force our navigation links to stack on top of
+    each other */
+    display: block;
+  }
+  
+  /* This will remove the border on mobile devices */
+  nav a:hover {
+    border: none;
+  }
+
+  block-quote {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+}
